@@ -28,7 +28,8 @@ RUN chown jboss:jboss $JBOSS_HOME/standalone/configuration/standalone-full-kie-s
 chown jboss:jboss $JBOSS_HOME/standalone/configuration/kie-server-users.properties && \
 chown jboss:jboss $JBOSS_HOME/standalone/configuration/kie-server-roles.properties && \
 chown jboss:jboss $JBOSS_HOME/bin/start_kie-server.sh && \
-chown jboss:jboss $JBOSS_HOME/../.m2/settings.xml
+chown jboss:jboss $JBOSS_HOME/../.m2/settings.xml && \
+chmod 755 $JBOSS_HOME/bin/start_kie-server.sh
 
 # 切换到用户 jboss 
 USER jboss
